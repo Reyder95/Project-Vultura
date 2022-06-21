@@ -37,6 +37,7 @@ func _process(delta):
 			
 	zoom = lerp(zoom, zoom_to, 0.1)		# Slowly zoom the camera towards the current "zoom_to" target
 	
+# Moves the camera
 func move_camera(x_pos, y_pos):
 	# Set the bounds that the camera cannot go passed based on zoom
 	left = limit_left + (offset.x * zoom.x) + (get_viewport().size.x * zoom.x / 2)
