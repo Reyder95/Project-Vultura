@@ -2,8 +2,8 @@ extends Node2D
 
 onready var camera = get_node("Camera");
 
-var galaxy_radius = 5000
-var max_stars = 2000
+var galaxy_radius = 1000
+var max_stars = 1000
 var galaxy_center_spacing = 400
 var galaxy_center = Vector2(0, 0)
 var rng
@@ -15,7 +15,7 @@ func _ready():
 	rng.randomize()
 	generate_starmap()
 	
-	camera.set_camera_bounds(-7500, 7500, -7500, 7500)		# Set the camera bounds for this scene
+	camera.set_camera_bounds(-10000, 10000, -10000, 10000)		# Set the camera bounds for this scene
 
 func generate_starmap():
 	var counter = galaxy_center_spacing + 1
@@ -25,7 +25,7 @@ func generate_starmap():
 	while counter < galaxy_center_spacing + galaxy_radius || star_counter < max_stars:
 		
 		# The Vector2 coordinates for this star's position on the galaxy map
-		var star_pos = Vector2(galaxy_center.x + (0 * cos(deg2rad(increase_angle)) + counter * sin(deg2rad(increase_angle))), galaxy_center.y + (-1 * ((0 * sin(deg2rad(increase_angle))) + counter * cos(deg2rad(increase_angle)))))
+		var star_pos = Vector2(galaxy_center.x + (0 * cos(deg2rad(increase_angle)) + (counter * 2 - 150) * sin(deg2rad(increase_angle))), galaxy_center.y + (-1 * ((0 * sin(deg2rad(increase_angle))) + (counter * 2 - 150) * cos(deg2rad(increase_angle)))))
 		
 		var randomize_value = rng.randi_range(0, 99)
 		var star_type
@@ -44,8 +44,10 @@ func generate_starmap():
 			star_type = Functions.StarType.PULSAR
 		else:
 			star_type = Functions.StarType.BLACK_HOLE
+			
+		var random_name = Functions.system_names[rng.randi_range(0, Functions.system_names.size() - 1)]
 		
-		var star_class_instance = Star.new(star_pos.x, star_pos.y, "Random Name", star_type)		# Instance the star class
+		var star_class_instance = Star.new(star_pos.x, star_pos.y, random_name, star_type)		# Instance the star class
 		
 		var star_scene_instance = star_scene.instance()		# Instance the star scene
 		star_scene_instance.initialize_star(star_class_instance)

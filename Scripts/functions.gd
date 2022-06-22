@@ -11,6 +11,7 @@ enum StarType {
 	BLACK_HOLE 
 }
 
+# Mapping a star type enum to a file name equivelant
 var startype_map_files = {
 	StarType.MAIN_SEQUENCE : "main_sequence",
 	StarType.WHITE_DWARF : "white_dwarf",
@@ -21,6 +22,7 @@ var startype_map_files = {
 	StarType.BLACK_HOLE : "black_hole"
 }
 
+# Mapping a star type enum to text to display it properly
 var startype_map_text = {
 	StarType.MAIN_SEQUENCE : "Main Sequence",
 	StarType.WHITE_DWARF : "White Dwarf",
@@ -30,3 +32,14 @@ var startype_map_text = {
 	StarType.PULSAR : "Pulsar",
 	StarType.BLACK_HOLE : "Black Hole"
 }
+
+# Temporary list of random names for star systems
+var system_names = [
+	"Ragnid",
+	"Ketar",
+	"Alpha Denuvos",
+	"Siniptris",
+	"Porcupine",
+	"Raoltoa",
+	"Jita"
+]
