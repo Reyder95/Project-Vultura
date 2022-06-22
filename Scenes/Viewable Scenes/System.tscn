@@ -1,3 +1,16 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites and Images/Backgrounds/galaxybg.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Prefabs/Camera.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/system.gd" type="Script" id=3]
 
 [node name="System" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 5000, 5000 )
+
+[node name="Camera" parent="." instance=ExtResource( 2 )]
+visible = false
