@@ -31,4 +31,5 @@ func _on_Area2D_mouse_exited():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed():
+		print("TEST!")
 		emit_signal("star_clicked", star_class)

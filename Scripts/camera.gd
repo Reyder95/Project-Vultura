@@ -2,7 +2,7 @@ extends Camera2D
 
 var camera_drag = false;			# Boolean for if we want to drag the camera
 var cursor_position					# Vector2 coordinate of the current mouse position
-var zoom_max = Vector2(4.0, 4.0)	# Vector2 coordinate of maximum zoom distance away from the game
+var zoom_max = Vector2(7.0, 7.0)	# Vector2 coordinate of maximum zoom distance away from the game
 var keyboard_move_speed = 7			# Speed at which the keyboard moves
 
 # Boundaries for the camera to not pass
