@@ -6,6 +6,7 @@ var coordinates		# The coordinate location of the star on the galaxy map
 var system_name		# The name of the system, also the star name
 var star_type		# The type of the star as an enum
 var scale			# Vector2 size multiplier of the star
+var orbit			# The celestial bodies that orbit this star
 
 
 func _init(x, y, name, type):

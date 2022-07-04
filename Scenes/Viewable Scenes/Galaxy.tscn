@@ -1,15 +1,21 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sprites and Images/Backgrounds/galaxybg.png" type="Texture" id=1]
+[ext_resource path="res://Sprites and Images/Backgrounds/galaxy-background-3.jpg" type="Texture" id=1]
 [ext_resource path="res://Scenes/Prefabs/Camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/galaxy.gd" type="Script" id=3]
 
 [node name="Galaxy" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="Background" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 15000, 15000 )
-
 [node name="Camera" parent="." instance=ExtResource( 2 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.01, 0.01 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 4.00006, 18 )
+scale = Vector2( 0.862853, 0.725942 )
+texture = ExtResource( 1 )

@@ -10,12 +10,30 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "Planet",
+"language": "GDScript",
+"path": "res://Scripts/Classes/class_planet.gd"
+}, {
+"base": "Node",
+"class": "PlanetResource",
+"language": "GDScript",
+"path": "res://Scripts/Classes/class_planetresource.gd"
+}, {
+"base": "Node",
 "class": "Star",
 "language": "GDScript",
 "path": "res://Scripts/Classes/class_star.gd"
+}, {
+"base": "Node",
+"class": "System",
+"language": "GDScript",
+"path": "res://Scripts/Classes/class_system.gd"
 } ]
 _global_script_class_icons={
-"Star": ""
+"Planet": "",
+"PlanetResource": "",
+"Star": "",
+"System": ""
 }
 
 [application]
