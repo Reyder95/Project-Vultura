@@ -9,7 +9,7 @@ var system
 func _ready():
 	galaxy.connect("system_entered", self, "_on_system_entered");
 	
-func _on_system_entered(star):
+func _on_system_entered(star, system):
 	game_camera_pos = game_camera.position		# Save galaxy camera position
 	galaxy.visible = false		# Prevent galaxy from being on the screen and us being able to click it
 	system = load("res://Scenes/Viewable Scenes/System.tscn").instance()

@@ -86,12 +86,12 @@ func generate_starmap():
 		
 		var star_scene_instance = star_scene.instance()		# Instance the star scene
 		star_scene_instance.connect("star_clicked", self, "_on_star_clicked")
-		star_scene_instance.initialize_star(star_class_instance)
+		star_scene_instance.initialize_star(star_class_instance, system_class_instance)
 		
 		var star_child = add_child(star_scene_instance)
 		
 		counter += float(5000) / float(2000)
 		star_counter += 1
 		
-func _on_star_clicked(star):
-	emit_signal("system_entered", star)
+func _on_star_clicked(star, system):
+	emit_signal("system_entered", star, system)
