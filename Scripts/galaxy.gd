@@ -53,8 +53,6 @@ func generate_starmap():
 			
 		previous_angles.push_front(rand_angle)
 		
-		print(previous_angles)
-		
 		# The Vector2 coordinates for this star's position on the galaxy map
 		var star_pos = Vector2(galaxy_center.x + (0 * cos(deg2rad(rand_angle)) + (counter * 2 - 150) * sin(deg2rad(rand_angle))), galaxy_center.y + (-1 * ((0 * sin(deg2rad(rand_angle))) + (counter * 2 - 150) * cos(deg2rad(rand_angle)))))
 		

@@ -17,6 +17,19 @@ func initialize_star(star, system):
 	
 	sprite.set_texture(load("res://Sprites and Images/Astral/Stars/" + Functions.startype_map_files[star.star_type] + ".png"))
 	sprite.scale *= star.scale
+	
+func manual_initialize(star, system, x, y):
+	star_class = star
+	system_class = system
+	
+	var sprite = get_node("Sprite")
+	var title = get_node("Title")
+	
+	position = Vector2(x, y)
+	title.text = star.system_name
+	
+	sprite.set_texture(load("res://Sprites and Images/Astral/Stars/" + Functions.startype_map_files[star.star_type] + ".png"))
+	sprite.scale *= star.scale
 
 
 func _on_Area2D_mouse_entered():

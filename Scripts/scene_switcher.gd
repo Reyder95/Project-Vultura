@@ -4,7 +4,7 @@ onready var galaxy = get_node("Galaxy")
 onready var game_camera = galaxy.get_node("Camera")
 
 var game_camera_pos
-var system
+var system_scene
 
 func _ready():
 	galaxy.connect("system_entered", self, "_on_system_entered");
@@ -12,6 +12,7 @@ func _ready():
 func _on_system_entered(star, system):
 	game_camera_pos = game_camera.position		# Save galaxy camera position
 	galaxy.visible = false		# Prevent galaxy from being on the screen and us being able to click it
-	system = load("res://Scenes/Viewable Scenes/System.tscn").instance()
-	system.get_node("Camera").set_zoom_max(Vector2(2.0, 2.0))
-	add_child(system)
+	system_scene = load("res://Scenes/Viewable Scenes/System.tscn").instance()
+	system_scene.initialize_system(system)
+	system_scene.get_node("Camera").set_zoom_max(Vector2(2.0, 2.0))
+	add_child(system_scene)

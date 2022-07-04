@@ -3,7 +3,7 @@ extends Node
 class_name System
 
 var star						# The star of the system (may make an array to support additional star systems)
-var planets = Array()			# The planets that are within the system
+#var planets = Array()			# The planets that are within the system
 var asteroid_belts = Array()	# The asteroid belts in the system. Usually will be 1, rarely will be 2 or more
 var starbase					# If the system has a starbase, this will be filled.
 var is_surveyed					# If the system is surveyed, this will be true. Surveyed systems are visible fully from the galaxy view.
@@ -17,8 +17,13 @@ func generate_system(class_star, home):
 	rng.randomize()
 	
 	var num_planets = rng.randi_range(0, 5)
+	var orbits = Array()
 	
 	for planet in num_planets:
-		Planet.new("Test Planet", "type", 30, 17)
+		var temp_planet = Planet.new("Test Planet", "type", 30, 17)
+		var temp_angle = rng.randi_range(0, 360);
+		var temp_radius = rng.randi_range(50, 500);
+		orbits.push_back(Orbit.new(temp_planet, temp_angle, temp_radius))
 	
+	star.initialize_orbits(orbits)
 

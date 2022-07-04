@@ -2,11 +2,11 @@ extends Node
 
 class_name Star
 
-var coordinates			# The coordinate location of the star on the galaxy map
-var system_name			# The name of the system, also the star name
-var star_type			# The type of the star as an enum
-var scale				# Vector2 size multiplier of the star
-var orbit = Array()			# The celestial bodies that orbit this star
+var coordinates				# The coordinate location of the star on the galaxy map
+var system_name				# The name of the system, also the star name
+var star_type				# The type of the star as an enum
+var scale					# Vector2 size multiplier of the star
+var orbits = Array()			# The celestial bodies that orbit this star
 
 
 func _init(x, y, name, type):
@@ -28,4 +28,7 @@ func _init(x, y, name, type):
 		scale = Vector2(0.3, 0.3)
 	elif star_type == Functions.StarType.BLACK_HOLE:
 		scale = Vector2(1.0, 1.0)
+		
+func initialize_orbits(orbits):
+	self.orbits = orbits
 	
