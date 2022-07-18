@@ -1,5 +1,9 @@
 extends Node
 
+# - Enums and Maps
+
+# -- Star Types
+
 # Different star types
 enum StarType {
 	MAIN_SEQUENCE,
@@ -9,21 +13,6 @@ enum StarType {
 	BROWN_DWARF,
 	PULSAR,
 	BLACK_HOLE 
-}
-
-enum ResourceType {
-	# Gases
-	HYDROGEN,		# Fuel
-	
-	# Metals
-	IRON,			# Building infrastructure.
-	COPPER,			# Electrical circuits.
-	TIN,			# Building infrastructure.
-	URANIUM,		# Nuclear items
-	
-	# Luxury Goods
-	ANIMAL_FUR,		# Clothing.
-	TRITIUM,		# Used for the holographic lights on various consumer goods
 }
 
 # Mapping a star type enum to a file name equivelant
@@ -48,6 +37,30 @@ var startype_map_text = {
 	StarType.BLACK_HOLE : "Black Hole"
 }
 
+# -- Resource Types
+
+enum ResourceDivision {
+	CONSUMER_GOOD = 1,
+	GAS = 2,
+	METAL = 3
+}
+
+# Different resources found on planets and other astral bodies
+enum ResourceType {
+	HYDROGEN = 1,		# Fuel
+	IRON = 2,			# Building infrastructure.
+	COPPER = 3,			# Electrical circuits.
+	TIN = 4,			# Building infrastructure.
+	URANIUM = 5,		# Nuclear items
+	ANIMAL_FUR = 6,		# Clothing.
+	TRITIUM = 7,		# Used for the holographic lights on various consumer goods
+	AMMONIA = 8,		# Fertilizer. Necessary for farming and survival
+	INFECTIOUS_METALS = 9,     # Ethereal - Used for building Ethereal-tier weapons and ships.
+	BRINE_GAS = 10, 			# Ethereal - Used for building Ethereal-tier weapons and ships
+	ECHTON_ORE = 11,		# Ethereal, ultra rare
+	AQUATIC_RESIN = 12      # Only on island and ocean worlds
+}
+
 # Mapping a resource type enum to a file name equivelant
 var resource_map_files = {
 	ResourceType.HYDROGEN : "hydrogen",
@@ -69,6 +82,58 @@ var resource_map_text = {
 	ResourceType.ANIMAL_FUR : "Animal Fur",
 	ResourceType.TRITIUM : "Tritium"
 }
+
+# -- Planet Types
+
+# Different planet types
+enum PlanetType {
+	ARCTIC = 1,
+	BARREN = 2,
+	CONTINENTAL = 3,
+	ETHEREAL = 4,
+	GAS_GIANT = 5,
+	ISLAND = 6,
+	OCEAN = 7,
+	VOLCANIC = 8
+}
+
+# Mapping a planet type to a file name
+var planet_map_files = {
+	PlanetType.ARCTIC : "arctic",
+	PlanetType.BARREN : "barren",
+	PlanetType.CONTINENTAL : "continental",
+	PlanetType.ETHEREAL : "ethereal",
+	PlanetType.GAS_GIANT : "gas_giant",
+	PlanetType.ISLAND : "island",
+	PlanetType.OCEAN : "ocean",
+	PlanetType.VOLCANIC : "volcanic"
+}
+
+# Mapping a planet type to text to display it properly
+var planet_map_text = {
+	PlanetType.ARCTIC : "Arctic",
+	PlanetType.BARREN : "Barren",
+	PlanetType.CONTINENTAL : "Continental",
+	PlanetType.ETHEREAL : "Ethereal",
+	PlanetType.GAS_GIANT : "Gas Giant",
+	PlanetType.ISLAND : "Island",
+	PlanetType.OCEAN : "Ocean",
+	PlanetType.VOLCANIC : "Volcanic"
+}
+
+# Mapping a planet type to random generation chance (rng)
+var planet_chance = {
+	PlanetType.ARCTIC : 0.125,
+	PlanetType.BARREN : 0.125,
+	PlanetType.CONTINENTAL : 0.125,
+	PlanetType.ETHEREAL : 0.125,
+	PlanetType.GAS_GIANT : 0.125,
+	PlanetType.ISLAND : 0.125,
+	PlanetType.OCEAN : 0.125,
+	PlanetType.VOLCANIC : 0.125
+}
+
+# - Useful Arrays
 
 # Temporary list of random names for star systems
 var system_names = [
