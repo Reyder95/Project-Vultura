@@ -1,5 +1,77 @@
 extends Node
 
+# Enums for various types of things in the game
+var planet_types = {}
+var resource_types = {}
+var star_types = {}
+
+# Mapping enum to its respective data
+var planet_objects = {}
+var resource_objects = {}
+
+# Load all game data upon game start
+func _ready():
+	
+	var planet_data = {}
+	var resource_data = {}
+	var star_data = {}
+	
+	var planet_json = File.new()
+	var resource_json = File.new()
+	var star_json = File.new()
+	
+	planet_json.open("res://data/planet_data.json", File.READ)
+	planet_data = parse_json(planet_json.get_as_text())
+	
+	for planet in planet_data:
+		planet_types[parse_enum_identifier(planet.name)] = int(planet.id)
+		
+		var new_planet = {
+			"name": planet.name,
+			"chance": planet.chance,
+			"radius": planet.radius,
+			"radius_null": planet.radius_end,
+			"filename": planet.filename,
+			"alternative_filepath": planet.alternative_filepath,
+			"description": planet.description,
+			"necessary_resources": planet.necessary_resources,
+			"resources": planet.resources
+		}
+		
+		planet_objects[int(planet.id)] = new_planet
+	
+	resource_json.open("res://data/resource_data.json", File.READ)
+	resource_data = parse_json(resource_json.get_as_text())
+	
+	for resource in resource_data:
+		resource_types[parse_enum_identifier(resource.name)] = int(resource.id)
+		
+		var new_resource = {
+			"name": resource.name,
+			"description": resource.description,
+			"filename": resource.filename,
+			"alternative_filepath": resource.alternative_filepath
+		}
+		
+		resource_objects[int(resource.id)] = new_resource
+		
+	for resource in planet_objects[planet_types.GAS_GIANT].resources:
+		print(resource_objects[int(resource.id)].name)
+	
+	star_json.open("res://data/star_data.json", File.READ)
+	star_data = parse_json(star_json.get_as_text())
+	
+	for star in star_data:
+		star_types[parse_enum_identifier(star.name)] = star.id
+		
+	print(star_types)
+	
+func parse_enum_identifier(string):
+	var new_string = string.to_upper()
+	new_string = new_string.replace(" ", "_")
+	return new_string
+
+
 # - Enums and Maps
 
 # -- Star Types
