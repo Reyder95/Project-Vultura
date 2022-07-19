@@ -8,6 +8,7 @@ var star_types = {}
 # Mapping enum to its respective data
 var planet_objects = {}
 var resource_objects = {}
+var star_objects = {}
 
 # Load all game data upon game start
 func _ready():
@@ -62,9 +63,21 @@ func _ready():
 	star_data = parse_json(star_json.get_as_text())
 	
 	for star in star_data:
-		star_types[parse_enum_identifier(star.name)] = star.id
+		star_types[parse_enum_identifier(star.name)] = int(star.id)
 		
-	print(star_types)
+		var new_star = {
+			"name": star.name,
+			"filename": star.filename,
+			"alternative_filepath": star.alternative_filepath,
+			"chance": star.chance,
+			"radius": star.radius,
+			"radius_end": star.radius_end,
+			"scale": star.scale
+		}
+		
+		star_objects[int(star.id)] = new_star
+	
+	
 	
 func parse_enum_identifier(string):
 	var new_string = string.to_upper()
