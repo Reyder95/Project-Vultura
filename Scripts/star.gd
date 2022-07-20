@@ -15,7 +15,7 @@ func initialize_star(star, system):
 	position = star.coordinates
 	title.text = star.system_name
 	
-	sprite.set_texture(load("res://Sprites and Images/Astral/Stars/" + Functions.startype_map_files[star.star_type] + ".png"))
+	sprite.set_texture(load("res://Sprites and Images/Astral/Stars/" + Functions.star_objects[star.star_type].filename))
 	sprite.scale *= star.scale
 	
 func manual_initialize(star, system, x, y):
@@ -28,7 +28,7 @@ func manual_initialize(star, system, x, y):
 	position = Vector2(x, y)
 	title.text = star.system_name
 	
-	sprite.set_texture(load("res://Sprites and Images/Astral/Stars/" + Functions.startype_map_files[star.star_type] + ".png"))
+	sprite.set_texture(load("res://Sprites and Images/Astral/Stars/" + Functions.star_objects[star.star_type].filename))
 	sprite.scale *= star.scale
 
 

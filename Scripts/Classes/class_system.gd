@@ -25,32 +25,14 @@ func generate_system(class_star, home):
 func generate_planets(num_planets, rng):
 	var orbits = Array()
 	
-	# Building rng planet map
-	var rng_planets = Dictionary()
-	
-	var previous_max_percent = 0
-	
-	# TODO -- Move to on-game-load, such as Functions file.
-	for planet_chance in Functions.planet_chance.keys():
-		var current_max_percent = previous_max_percent + Functions.planet_chance[planet_chance]
-		var planet_rng_object = {
-			"minimum": previous_max_percent,
-			"maximum": current_max_percent
-		}
-		
-		rng_planets[planet_chance] = planet_rng_object
-		previous_max_percent = current_max_percent
-	
-	var current_rng = 0
-	
 	for i in num_planets:
 		
 		var temp_type
-		var rng_type = rng.randf_range(0, 1)
+		var rng_type = rng.randf_range(0, 100)
 		
-		for rng_planet in rng_planets.keys():
-			if rng_type >= rng_planets[rng_planet].minimum && rng_type <= rng_planets[rng_planet].maximum:
-				temp_type = rng_planet
+		for planet in Functions.planet_rng_table.keys():
+			if rng_type >= Functions.planet_rng_table[planet].minimum && rng_type <= Functions.planet_rng_table[planet].maximum:
+				temp_type = planet
 				break
 				
 		

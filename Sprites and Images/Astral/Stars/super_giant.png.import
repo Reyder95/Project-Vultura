@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/supergiant.png-aae0188fd04793bdfe1ab27981f638d7.stex"
+path="res://.import/super_giant.png-74aaf6a11659ee1310dc79632fa566c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites and Images/Astral/Stars/supergiant.png"
-dest_files=[ "res://.import/supergiant.png-aae0188fd04793bdfe1ab27981f638d7.stex" ]
+source_file="res://Sprites and Images/Astral/Stars/super_giant.png"
+dest_files=[ "res://.import/super_giant.png-74aaf6a11659ee1310dc79632fa566c7.stex" ]
 
 [params]
 
