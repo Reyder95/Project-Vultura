@@ -13,21 +13,8 @@ func _init(x, y, name, type):
 	coordinates = Vector2(x, y)
 	system_name = name
 	star_type = type
+	scale = Vector2(Functions.star_objects[star_type].scale, Functions.star_objects[star_type].scale)
 	
-	if star_type == Functions.StarType.MAIN_SEQUENCE:
-		scale = Vector2(1.0, 1.0)
-	elif star_type == Functions.StarType.SUPER_GIANT:
-		scale = Vector2(1.4, 1.4)
-	elif star_type == Functions.StarType.RED_GIANT:
-		scale = Vector2(1.2, 1.2)
-	elif star_type == Functions.StarType.WHITE_DWARF:
-		scale = Vector2(0.5, 0.5)
-	elif star_type == Functions.StarType.BROWN_DWARF:
-		scale = Vector2(0.8, 0.8)
-	elif star_type == Functions.StarType.PULSAR:
-		scale = Vector2(0.3, 0.3)
-	elif star_type == Functions.StarType.BLACK_HOLE:
-		scale = Vector2(1.0, 1.0)
 		
 func initialize_orbits(orbits):
 	self.orbits = orbits

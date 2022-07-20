@@ -41,7 +41,8 @@ func place_planets():
 	for orbit in orbit_positions:
 		var planet_scene_instance = planet_scene.instance()
 		planet_scene_instance.position = orbit.position
-		planet_scene_instance.get_node("Sprite").set_texture(load("res://Sprites and Images/Astral/Planets/" + Functions.planet_map_files[orbit.celestial_body.planet_type] + ".png"))
+		planet_scene_instance.get_node("Sprite").set_texture(load("res://Sprites and Images/Astral/Planets/" + Functions.planet_objects[orbit.celestial_body.planet_type].filename))
+		planet_scene_instance.initialize_planet(orbit.celestial_body)
 		add_child(planet_scene_instance)
 		print("Positions: (" + str(orbit.position.x) + "," + str(orbit.position.y) + ")")
 		print("Celestial Body: ", orbit.celestial_body)
