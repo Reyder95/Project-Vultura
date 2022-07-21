@@ -27,7 +27,8 @@ func determine_orbits(origin):
 	if (celestial_body.orbits.size() > 0):
 		for orbit in celestial_body.orbits:
 			var temp_orbit_positions = orbit.determine_orbits(orbit_dict.position)
-			orbit_positions.append_all(temp_orbit_positions)
+			orbit_positions.append_array(temp_orbit_positions)
 	
 	return orbit_positions
 	
+

@@ -28,6 +28,7 @@ func place_star():
 	var star_scene_instance = star_scene.instance()
 	
 	star_scene_instance.manual_initialize(star, system, 0, 0)
+	star_scene_instance.get_node("Sprite").scale *= 1.5
 	
 	add_child(star_scene_instance)
 
@@ -42,7 +43,14 @@ func place_planets():
 		var planet_scene_instance = planet_scene.instance()
 		planet_scene_instance.position = orbit.position
 		planet_scene_instance.get_node("Sprite").set_texture(load("res://Sprites and Images/Astral/Planets/" + Functions.planet_objects[orbit.celestial_body.planet_type].filename))
+
 		planet_scene_instance.initialize_planet(orbit.celestial_body)
+		
+		if planet_scene_instance.planet_class.is_moon:
+			planet_scene_instance.get_node("Sprite").scale *= 0.7
+		else:
+			planet_scene_instance.get_node("Sprite").scale *= 1.6
+			
 		add_child(planet_scene_instance)
 		print("Positions: (" + str(orbit.position.x) + "," + str(orbit.position.y) + ")")
 		print("Celestial Body: ", orbit.celestial_body)
@@ -53,7 +61,7 @@ func _draw():
 	var color = Color(1.0, 1.0, 1.0, 0.3)
 	
 	for body in celestial_bodies:
-		draw_circle_arc(Vector2(0, 0), body.orbit.radius, angle_from, angle_to, color, 128)
+		draw_circle_arc(body.center, body.orbit.radius, angle_from, angle_to, color, 128)
 	
 func draw_circle_arc(center, radius, angle_from, angle_to, color, points):
 	var nb_points = points

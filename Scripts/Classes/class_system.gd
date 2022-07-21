@@ -34,13 +34,25 @@ func generate_planets(num_planets, rng):
 			if rng_type >= Functions.planet_rng_table[planet].minimum && rng_type <= Functions.planet_rng_table[planet].maximum:
 				temp_type = planet
 				break
-				
 		
-		var temp_planet = Planet.new(star.system_name + " " + str(i), temp_type, 30, 17)
+		var temp_planet = Planet.new(star.system_name + " " + str(i), temp_type, 30, 17, false)
 		var temp_angle = rng.randi_range(0, 360);
 		var temp_radius = rng.randi_range(50, 500);
-		orbits.push_back(Orbit.new(temp_planet, temp_angle, temp_radius))
+		var new_orbit = Orbit.new(temp_planet, temp_angle, temp_radius)
+		generate_planet_moons(rng, new_orbit)
+		orbits.push_back(new_orbit)
 		
 	return orbits
+	
+func generate_planet_moons(rng, orbit):
+	var rand_num = rng.randi_range(0, 100)
+	
+	if rand_num < 50:
+		var num_moons = rng.randi_range(1, 3)
+		
+		for moons in num_moons:
+			var new_moon = Planet.new("new_moon", 1, rng.randi_range(0, 360), rng.randi_range(20, 50), true)
+			var new_orbit = Orbit.new(new_moon, rng.randi_range(0, 360), rng.randi_range(20, 50))
+			orbit.celestial_body.orbits.push_back(new_orbit)
 
 

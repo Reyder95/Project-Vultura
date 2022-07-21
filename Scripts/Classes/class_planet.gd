@@ -7,10 +7,12 @@ var resources = Array()				# Array of all the resources on the planet
 var planet_type						# The type of planet as an enum
 var orbits = Array()					# The celestial body or bodies that are orbiting this planet
 var position
+var is_moon
 
-func _init(planet_name, planet_type, angle, radius):
+func _init(planet_name, planet_type, angle, radius, is_moon):
 	self.planet_name = planet_name
 	self.planet_type = planet_type
+	self.is_moon = is_moon
 	
 	generate_resources()
 	
