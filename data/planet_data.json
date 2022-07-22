@@ -1,0 +1,314 @@
+[
+    {
+        "id": 1,
+        "name": "Arctic",
+        "chance": 12.5,
+        "radius": null,
+        "radius_end": null,
+        "filename": "arctic.png",
+        "alternative_filepath": null,
+        "description": "A world that has been undergoing a relentless ice age for the last millenia. Precious resources on these kinds of planets are few and far between.",
+        "necessary_resources": null,
+        "resources": [
+            {
+                "id": 1,
+                "chance": 75,
+                "multiplier": 1.5,
+                "one_must_have": false
+            },
+            {
+                "id": 7,
+                "chance": 1.5,
+                "multiplier": 0.3,
+                "one_must_have": false
+            },
+            {
+                "id": 8,
+                "chance": 23.5,
+                "multiplier": 1.0,
+                "one_must_have": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Barren",
+        "chance": 12.5,
+        "radius": null,
+        "radius_end": null,
+        "filename": "barren.png",
+        "alternative_filepath": null,
+        "description": "A world with no atmosphere. An abundance of metals can be found on the surface. A space miner's dream.",
+        "necessary_resources": null,
+        "resources": [
+            {
+                "id": 2,
+                "chance": 50,
+                "multiplier": 1,
+                "one_must_have": false
+            },
+            {
+                "id": 3,
+                "chance": 25,
+                "multiplier": 0.8,
+                "one_must_have": false
+            },
+            {
+                "id": 4,
+                "chance": 25,
+                "multiplier": 0.8,
+                "one_must_have": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Continental",
+        "chance": 12.5,
+        "radius": null,
+        "radius_end": null,
+        "filename": "continental.png",
+        "alternative_filepath": null,
+        "description": "A world that's suitable for natural human life. Covered by vast oceans, and land with rich minerals.",
+        "necessary_resources": null,
+        "resources": [
+            {
+                "id": 1,
+                "chance": 12.5,
+                "multiplier": 2.0,
+                "one_must_have": false
+            },
+            {
+                "id": 2,
+                "chance": 20,
+                "multiplier": 1.0,
+                "one_must_have": false
+            },
+            {
+                "id": 3,
+                "chance": 20,
+                "multiplier": 1.0,
+                "one_must_have": false
+            },
+            {
+                "id": 4,
+                "chance": 20,
+                "multiplier": 1.0,
+                "one_must_have": false
+            },
+            {
+                "id": 5,
+                "chance": 5,
+                "multiplier": 0.7,
+                "one_must_have": false
+            },
+            {
+                "id": 6,
+                "chance": 10,
+                "multiplier": 0.1,
+                "one_must_have": false
+            },
+            {
+                "id": 7,
+                "chance": 1.2,
+                "multiplier": 0.3,
+                "one_must_have": false
+            },
+            {
+                "id": 8,
+                "chance": 11.3,
+                "multiplier": 0.6,
+                "one_must_have": false
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ethereal",
+        "chance": 12.5,
+        "radius": 90,
+        "radius_end": null,
+        "filename": "ethereal.png",
+        "alternative_filepath": null,
+        "description": "A rare void world found typically on the outskirts of the galaxy. It is unknown how it became like this. Glowing blue lights emanate from the core of the planet, and extremely valuable resources can be found.",
+        "necessary_resources": [
+            {
+                "id": 9,
+                "multiplier": 1.0
+            }
+        ],
+        "resources": [
+            {
+                "id": 10,
+                "chance": 25,
+                "multiplier": 1.0,
+                "one_must_have": false
+            },
+            {
+                "id": 11,
+                "chance": 1.5,
+                "multiplier": 1.0,
+                "one_must_have": true
+            },
+            {
+                "id": 2,
+                "chance": 50,
+                "multiplier": 0.4,
+                "one_must_have": false
+            },
+            {
+                "id": 4,
+                "chance": 23.5,
+                "multiplier": 0.3,
+                "one_must_have": false
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Gas Giant",
+        "chance": 12.5,
+        "radius": null,
+        "radius_end": 50,
+        "filename": "gas_giant.png",
+        "alternative_filepath": null,
+        "description": "A gigantic swirling ball of various gases. Useful for gas-based resources, not so much for metals. Definitely not good for habitability.",
+        "necessary_resources": [
+            {
+                "id": 1,
+                "multiplier": 2.0
+            }
+        ],
+        "resources": [
+            {
+                "id": 7,
+                "chance": 40,
+                "multiplier": 0.6,
+                "one_must_have": false
+            },
+            {
+                "id": 8,
+                "chance": 60,
+                "multiplier": 0.5,
+                "one_must_have": false
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Island",
+        "chance": 12.5,
+        "radius": null,
+        "radius_end": null,
+        "filename": "island.png",
+        "alternative_filepath": null,
+        "description": "A mostly ocean world with one island sitting in the middle.",
+        "necessary_resources": [
+            {
+                "id": 12,
+                "multiplier": 0.3
+            },
+            {
+                "id": 1,
+                "multiplier": 1.0
+            }
+        ],
+        "resources": [
+            {
+                "id": 2,
+                "chance": 50,
+                "multiplier": 0.3,
+                "one_must_have": false
+            },
+            {
+                "id": 4,
+                "chance": 50,
+                "multiplier": 0.3,
+                "one_must_have": false
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Ocean",
+        "chance": 12.5,
+        "radius": null,
+        "radius_end": null,
+        "filename": "ocean.png",
+        "alternative_filepath": null,
+        "description": "A world covered every inch in ocean. Occasionally in these worlds there may be small islands with small amounts of resources.",
+        "necessary_resources": [
+            {
+                "id": 12,
+                "multiplier": 0.5
+            },
+            {
+                "id": 1,
+                "multiplier": 1.2
+            }
+        ],
+        "resources": [
+            {
+                "id": 2,
+                "chance": 10,
+                "multiplier": 0.1,
+                "one_must_have": false
+            },
+            {
+                "id": 3,
+                "chance": 10,
+                "multiplier": 0.1,
+                "one_must_have": false
+            },
+            {
+                "id": 4,
+                "chance": 10,
+                "multiplier": 0.1,
+                "one_must_have": false
+            },
+            {
+                "id": 8,
+                "chance": 70,
+                "multiplier": 0.3,
+                "one_must_have": false
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Volcanic",
+        "chance": 12.5,
+        "radius": null,
+        "radius_end": 80,
+        "filename": "volcanic.png",
+        "alternative_filepath": null,
+        "description": "A molten rocky planet that became too hot to handle. Molten material can be found here. Abundant metals and other similar resources especially.",
+        "necessary_resources": null,
+        "resources": [
+            {
+                "id": 5,
+                "chance": 30,
+                "multiplier": 0.5,
+                "one_must_have": false
+            },
+            {
+                "id": 2,
+                "chance": 30,
+                "multiplier": 0.8,
+                "one_must_have": true
+            },
+            {
+                "id": 3,
+                "chance": 20,
+                "multiplier": 0.7,
+                "one_must_have": true
+            },
+            {
+                "id": 4,
+                "chance": 20,
+                "multiplier": 1.0,
+                "one_must_have": false
+            }
+        ]
+    }
+]

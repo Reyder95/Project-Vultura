@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "Orbit",
+"language": "GDScript",
+"path": "res://Scripts/Classes/class_orbit.gd"
+}, {
+"base": "Node",
 "class": "Planet",
 "language": "GDScript",
 "path": "res://Scripts/Classes/class_planet.gd"
@@ -30,6 +35,7 @@ _global_script_classes=[ {
 "path": "res://Scripts/Classes/class_system.gd"
 } ]
 _global_script_class_icons={
+"Orbit": "",
 "Planet": "",
 "PlanetResource": "",
 "Star": "",

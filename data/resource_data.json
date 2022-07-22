@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Hydrogen",
+        "description": "Enter description for Hydrogen here.",
+        "filename": "hydrogen.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 2,
+        "name": "Iron",
+        "description": "Enter description for Iron here.",
+        "filename": "iron.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 3,
+        "name": "Copper",
+        "description": "Enter description for Copper here.",
+        "filename": "copper.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 4,
+        "name": "Tin",
+        "description": "Enter description for Tin here.",
+        "filename": "tin.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 5,
+        "name": "Uranium",
+        "description": "Enter description for Uranium here.",
+        "filename": "uranium.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 6,
+        "name": "Animal Fur",
+        "description": "Enter description for Animal Fur here.",
+        "filename": "animal_fur.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 7,
+        "name": "Tritium",
+        "description": "Enter description for Tritium here.",
+        "filename": "tritium.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 8,
+        "name": "Ammonia",
+        "description": "Enter description for Ammonia here.",
+        "filename": "ammonia.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 9,
+        "name": "Infectious Metals",
+        "description": "Enter description for Infectious Metals here.",
+        "filename": "infectious_metals.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 10,
+        "name": "Brine Gas",
+        "description": "Enter description for Brine Gas here.",
+        "filename": "brine_gas.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 11,
+        "name": "Echton Ore",
+        "description": "Enter description for Echton Ore here.",
+        "filename": "echton_ore.png",
+        "alternative_filepath": null
+    },
+    {
+        "id": 12,
+        "name": "Aquatic Resin",
+        "description": "Enter description for Aquatic Resin here.",
+        "filename": "aquatic_resin.png",
+        "alternative_filepath": null
+    }
+]
