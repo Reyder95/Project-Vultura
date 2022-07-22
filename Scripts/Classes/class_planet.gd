@@ -40,6 +40,12 @@ func generate_resources():
 		for resource_item in Functions.planet_objects[planet_type].resources:
 			if resource_item.id == temp_item:
 				temp_amount = floor(temp_amount * resource_item.multiplier)
+				break
+				
+		var abundance_num = rng.randi_range(0, 100)
+		
+		if abundance_num < 3:
+			temp_amount *= 1.5
 				
 		var temp_resource = PlanetResource.new(temp_item, temp_amount)
 		

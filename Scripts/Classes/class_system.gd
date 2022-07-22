@@ -37,7 +37,7 @@ func generate_planets(num_planets, rng):
 		
 		var temp_planet = Planet.new(star.system_name + " " + str(i), temp_type, 30, 17, false)
 		var temp_angle = rng.randi_range(0, 360);
-		var temp_radius = rng.randi_range(50, 500);
+		var temp_radius = rng.randi_range(85, 500);
 		var new_orbit = Orbit.new(temp_planet, temp_angle, temp_radius)
 		generate_planet_moons(rng, new_orbit)
 		orbits.push_back(new_orbit)
