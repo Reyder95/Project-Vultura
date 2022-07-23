@@ -12,10 +12,10 @@ Project Vultura is a video game set in space, bringing great aspects of many gam
 
 Project Vultura will undergo multiple phases of development. This is to organize the workflow and our focuses for each phase to keep things coherent.
 
-### Phase 1 - Preparation [CURRENT]
+### Phase 1 - Preparation [COMPLETE]
 The preparation phase will contain all the grunt work to set up the game for further development. These will primarily focus on the initial preparations of the project. Such as Github (Hi!), project management (Asana), and so forth. It will be where we develop the basics of the game, primarily the galaxy generation, and other basic functions.
 
-### Phase 2 - Gameplay Systems
+### Phase 2 - Gameplay Systems [CURRENT]
 After the initial scenes and preparations have been completed, we can move onto actual gameplay. This will be where we develop all the gameplay systems, as well as clean up anything we may have missed in the last phase. Some systems include
 * Colonies
 * Ship movement
