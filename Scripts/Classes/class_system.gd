@@ -45,13 +45,20 @@ func generate_planets(num_planets, rng):
 	return orbits
 	
 func generate_planet_moons(rng, orbit):
+	
+	var letter_dict = {
+		"0": "A",
+		"1": "B",
+		"2": "C"
+	}
+	
 	var rand_num = rng.randi_range(0, 100)
 	
 	if rand_num < 50:
 		var num_moons = rng.randi_range(1, 3)
 		
 		for moons in num_moons:
-			var new_moon = Planet.new("new_moon", 1, rng.randi_range(0, 360), rng.randi_range(20, 50), true)
+			var new_moon = Planet.new(orbit.celestial_body.planet_name + letter_dict[str(moons)], 1, rng.randi_range(0, 360), rng.randi_range(20, 50), true)
 			var new_orbit = Orbit.new(new_moon, rng.randi_range(0, 360), rng.randi_range(20, 50))
 			orbit.celestial_body.orbits.push_back(new_orbit)
 

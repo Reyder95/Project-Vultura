@@ -52,8 +52,6 @@ func place_planets():
 			planet_scene_instance.get_node("Sprite").scale *= 1.6
 			
 		add_child(planet_scene_instance)
-		print("Positions: (" + str(orbit.position.x) + "," + str(orbit.position.y) + ")")
-		print("Celestial Body: ", orbit.celestial_body)
 		
 func _draw():
 	var angle_from = 0
