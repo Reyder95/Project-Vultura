@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Main Sequence",
+        "filename": "main_sequence.png",
+        "alternative_filepath": null,
+        "chance": 25,
+        "radius": null,
+        "radius_end": null,
+        "scale": 1.2
+    },
+    {
+        "id": 2,
+        "name": "Super Giant",
+        "filename": "super_giant.png",
+        "alternative_filepath": null,
+        "chance": 25,
+        "radius": null,
+        "radius_end": null,
+        "scale": 1.2
+    },
+    {
+        "id": 3,
+        "name": "Red Giant",
+        "filename": "red_giant.png",
+        "alternative_filepath": null,
+        "chance": 25,
+        "radius": null,
+        "radius_end": null,
+        "scale": 1.2
+    },
+    {
+        "id": 4,
+        "name": "White Dwarf",
+        "filename": "white_dwarf.png",
+        "alternative_filepath": null,
+        "chance": 10,
+        "radius": null,
+        "radius_end": null,
+        "scale": 0.5
+    },
+    {
+        "id": 5,
+        "name": "Brown Dwarf",
+        "filename": "brown_dwarf.png",
+        "alternative_filepath": null,
+        "chance": 10,
+        "radius": null,
+        "radius_end": null,
+        "scale": 0.8
+    },
+    {
+        "id": 6,
+        "name": "Pulsar",
+        "filename": "pulsar.png",
+        "alternative_filepath": null,
+        "chance": 3,
+        "radius": null,
+        "radius_end": null,
+        "scale": 0.3
+    },
+    {
+        "id": 7,
+        "name": "Black Hole",
+        "filename": "black_hole.png",
+        "alternative_filepath": null,
+        "chance": 2,
+        "radius": null,
+        "radius_end": null,
+        "scale": 1.0
+    }
+]
