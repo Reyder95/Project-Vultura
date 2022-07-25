@@ -2,12 +2,15 @@ extends Node2D
 
 onready var galaxy = get_node("Galaxy")
 onready var game_camera = galaxy.get_node("Camera")
+onready var inspector = get_node("CanvasLayer/Inspector")
 
 var game_camera_pos
 var system_scene
 
 func _ready():
 	galaxy.connect("system_entered", self, "_on_system_entered");
+	galaxy.connect("star_hovered", self, "_on_star_hovered");
+	galaxy.connect("star_exited", self, "_on_star_exited");
 	
 func _on_system_entered(star, system):
 	game_camera_pos = game_camera.position		# Save galaxy camera position
@@ -25,3 +28,12 @@ func _on_system_exited():
 	system_scene.queue_free()
 	game_camera.current = true
 	
+func _on_star_hovered(star):
+	
+	inspector.get_node("Panel/Star").visible = true
+	inspector.get_node("Panel/Star/System Value").text = star.system_name
+	inspector.get_node("Panel/Star/Star Type Value").text = Functions.star_objects[star.star_type].name
+	inspector.get_node("Panel/Star/Sprite").set_texture(load("res://Sprites and Images/Astral/Stars/" + Functions.star_objects[star.star_type].filename))
+	
+func _on_star_exited():
+	inspector.get_node("Panel/Star").visible = false

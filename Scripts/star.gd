@@ -3,7 +3,9 @@ extends Node2D
 var star_class
 var system_class
 
-signal star_clicked(star)
+signal star_clicked(star) 
+signal star_hovered(star)
+signal star_exited
 
 func initialize_star(star, system):
 	star_class = star
@@ -35,11 +37,15 @@ func manual_initialize(star, system, x, y):
 func _on_Area2D_mouse_entered():
 	var title = get_node("Title")
 	
+	emit_signal("star_hovered", star_class)
+	
 	title.visible = true
 
 
 func _on_Area2D_mouse_exited():
 	var title = get_node("Title")
+	
+	emit_signal("star_exited")
 	
 	title.visible = false
 
