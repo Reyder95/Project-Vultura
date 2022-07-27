@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Prefabs/TableRow.tscn" type="PackedScene" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.309804, 0.341176, 0.368627, 0.560784 )
+
+[node name="Table" type="Panel"]
+anchor_right = 0.281
+anchor_bottom = 1.0
+margin_right = 0.47998
+margin_bottom = 2.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 0.994
+anchor_bottom = 0.996
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 0.23999
+margin_bottom = 0.328003
+custom_constants/separation = 10
+
+[node name="TableRow" parent="VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 535.0
+margin_bottom = 35.0
