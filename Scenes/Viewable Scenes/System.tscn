@@ -20,10 +20,10 @@ region_rect = Rect2( 0, 0, 5000, 5000 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Button" type="Button" parent="CanvasLayer"]
-margin_left = 897.0
-margin_top = 954.0
-margin_right = 1019.0
-margin_bottom = 1010.0
+margin_left = 1279.0
+margin_top = 1155.0
+margin_right = 1401.0
+margin_bottom = 1211.0
 text = "Back"
 script = ExtResource( 4 )
 
