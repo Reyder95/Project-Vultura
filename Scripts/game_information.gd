@@ -21,4 +21,14 @@ var resources = {
 	"10": null,
 	"11": null,
 	"12": null
-}
+} 
+
+func _initialize_game():
+	time.year = 2100
+	time.month = 1
+	time.day = 1
+	
+	credits = 25000
+	
+	for resource in resources.keys():
+		resources[resource] = 0
