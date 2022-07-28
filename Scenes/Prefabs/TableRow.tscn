@@ -44,5 +44,6 @@ size_flags_horizontal = 3
 text = "1500"
 align = 2
 
+[connection signal="gui_input" from="." to="." method="_on_TableRow_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_TableRow_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_TableRow_mouse_exited"]
