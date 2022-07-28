@@ -8,6 +8,7 @@ var star
 var celestial_bodies
 
 signal system_exited
+signal planet_hovered(planet)
 
 func _ready():
 	get_node("Camera").set_camera_bounds(-2500, 2500, -2500, 2500)
@@ -51,6 +52,8 @@ func place_planets():
 		else:
 			planet_scene_instance.get_node("Sprite").scale *= 1.6
 			
+		planet_scene_instance.connect("planet_hovered", self, "_on_planet_entered")
+			
 		add_child(planet_scene_instance)
 		
 func _draw():
@@ -76,3 +79,6 @@ func draw_circle_arc(center, radius, angle_from, angle_to, color, points):
 
 func _on_Button_pressed():
 	emit_signal("system_exited")
+	
+func _on_planet_entered(planet_class):
+	emit_signal("planet_hovered", planet_class)

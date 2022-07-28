@@ -11,6 +11,8 @@ var rng
 var star_scene = preload("res://Scenes/Prefabs/Star.tscn")
 
 signal system_entered(star)
+signal star_hovered(star)
+signal star_exited
 
 func _ready():
 	rng = RandomNumberGenerator.new()
@@ -73,6 +75,8 @@ func generate_starmap():
 		
 		var star_scene_instance = star_scene.instance()		# Instance the star scene
 		star_scene_instance.connect("star_clicked", self, "_on_star_clicked")
+		star_scene_instance.connect("star_hovered", self, "_on_star_hovered")
+		star_scene_instance.connect("star_exited", self, "_on_star_exited")
 		star_scene_instance.initialize_star(star_class_instance, system_class_instance)
 		
 		var star_child = add_child(star_scene_instance)
@@ -82,3 +86,9 @@ func generate_starmap():
 		
 func _on_star_clicked(star, system):
 	emit_signal("system_entered", star, system)
+	
+func _on_star_hovered(star):
+	emit_signal("star_hovered", star)
+	
+func _on_star_exited():
+	emit_signal("star_exited")
