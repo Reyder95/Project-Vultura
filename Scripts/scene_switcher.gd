@@ -20,6 +20,7 @@ func _on_system_entered(star, system):
 	system_scene.initialize_system(system)
 	system_scene.get_node("Camera").set_zoom_max(Vector2(2.0, 2.0))
 	system_scene.connect("system_exited", self, "_on_system_exited");
+	system_scene.connect("planet_hovered", self, "_on_planet_hovered");
 	add_child(system_scene)
 	
 func _on_system_exited():
@@ -30,6 +31,8 @@ func _on_system_exited():
 	
 func _on_star_hovered(star):
 	
+	inspector.get_node("Panel/Planet").visible = false
+	
 	inspector.get_node("Panel/Star").visible = true
 	inspector.get_node("Panel/Star/System Value").text = star.system_name
 	inspector.get_node("Panel/Star/Star Type Value").text = Functions.star_objects[star.star_type].name
@@ -37,3 +40,17 @@ func _on_star_hovered(star):
 	
 func _on_star_exited():
 	inspector.get_node("Panel/Star").visible = false
+	
+func _on_planet_hovered(planet):
+	
+	inspector.get_node("Panel/Planet").visible = true
+	inspector.get_node("Panel/Planet/Planet Value").text = planet.planet_name
+	inspector.get_node("Panel/Planet/Planet Type Value").text = Functions.planet_objects[planet.planet_type].name
+	inspector.get_node("Panel/Planet/Sprite").set_texture(load("res://Sprites and Images/Astral/Planets/" + Functions.planet_objects[planet.planet_type].filename))
+	
+	var resource_table = inspector.get_node("Panel/Planet/Table")
+	
+	resource_table.clear_resources()
+	
+	for resource in planet.resources:
+		resource_table.add_resource(resource)

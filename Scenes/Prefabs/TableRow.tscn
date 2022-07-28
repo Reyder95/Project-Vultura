@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sprites and Images/Astral/Planets/arctic.png" type="Texture" id=1]
+[ext_resource path="res://Sprites and Images/Resources/aquatic_resin.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/resource_row.gd" type="Script" id=2]
 
 [node name="TableRow" type="Panel"]
 anchor_right = 0.279
@@ -9,11 +10,13 @@ margin_right = -0.680054
 margin_bottom = 0.439999
 rect_min_size = Vector2( 0, 35 )
 size_flags_horizontal = 3
+script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 10.0
+margin_right = -15.0
 margin_bottom = -11.0
 custom_constants/separation = 0
 
@@ -28,15 +31,18 @@ stretch_mode = 6
 
 [node name="Resource" type="Label" parent="HBoxContainer"]
 margin_left = 50.0
-margin_right = 292.0
+margin_right = 285.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 text = "Hydrogen"
 
 [node name="ResourceQty" type="Label" parent="HBoxContainer"]
-margin_left = 292.0
-margin_right = 535.0
+margin_left = 285.0
+margin_right = 520.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 text = "1500"
 align = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_TableRow_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_TableRow_mouse_exited"]
