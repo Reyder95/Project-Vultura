@@ -58,8 +58,8 @@ Functions="*res://Scripts/functions.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/width=2560
+window/size/height=1440
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
