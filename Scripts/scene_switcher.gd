@@ -47,6 +47,7 @@ func _on_planet_hovered(planet):
 	inspector.get_node("Panel/Planet/Planet Value").text = planet.planet_name
 	inspector.get_node("Panel/Planet/Planet Type Value").text = Functions.planet_objects[planet.planet_type].name
 	inspector.get_node("Panel/Planet/Sprite").set_texture(load("res://Sprites and Images/Astral/Planets/" + Functions.planet_objects[planet.planet_type].filename))
+	inspector.get_node("Panel/Planet/ResourceInfo").visible = false
 	
 	var resource_table = inspector.get_node("Panel/Planet/Table")
 	

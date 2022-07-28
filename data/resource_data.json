@@ -2,84 +2,84 @@
     {
         "id": 1,
         "name": "Hydrogen",
-        "description": "Enter description for Hydrogen here.",
+        "description": "Hydrogen is used for fueling ships, creating various consumer goods, and aiding the production of infrastructure. It's a basis for much of the production in the galaxy. Can be found on most worlds, but is abundant on gaseous worlds.",
         "filename": "hydrogen.png",
         "alternative_filepath": null
     },
     {
         "id": 2,
         "name": "Iron",
-        "description": "Enter description for Iron here.",
+        "description": "iron is used for the production of infrastructure, weapon casings and ship hulls. When focusing on military or colony improvement, this is an important resource. Can be found on worlds where there is lots of land.",
         "filename": "iron.png",
         "alternative_filepath": null
     },
     {
         "id": 3,
         "name": "Copper",
-        "description": "Enter description for Copper here.",
+        "description": "Copper is an important resource when handling electronics of any kind. Used as a conductor, it is vital for ship systems and the power grid of colonies. Can be found on worlds where there is lots of land.",
         "filename": "copper.png",
         "alternative_filepath": null
     },
     {
         "id": 4,
         "name": "Tin",
-        "description": "Enter description for Tin here.",
+        "description": "Tin is used for virtually everything. From ship hulls and infrastructure, to colony improvements. Tin is a vital resource. Can be found on worlds where there is lots of land.",
         "filename": "tin.png",
         "alternative_filepath": null
     },
     {
         "id": 5,
         "name": "Uranium",
-        "description": "Enter description for Uranium here.",
+        "description": "Uranium is used for improved power generation, and improved ship propulsion. It is also used to further improve jump drives, which allow for faster traveling. Can be found on worlds where radiation may have once taken place, or fully irradiated worlds.",
         "filename": "uranium.png",
         "alternative_filepath": null
     },
     {
         "id": 6,
         "name": "Animal Fur",
-        "description": "Enter description for Animal Fur here.",
+        "description": "Animal Fur is a widely renowned consumer good. People like nice things, especially if they're made out of something exotic. You can harvest animal fur from planets that seem to be sprawling with life.",
         "filename": "animal_fur.png",
         "alternative_filepath": null
     },
     {
         "id": 7,
         "name": "Tritium",
-        "description": "Enter description for Tritium here.",
+        "description": "Tritium is a consumer good first and foremost. Useful in neon lights around buildings, watches, and other fun and useful items. Primarily found on gaseous worlds.",
         "filename": "tritium.png",
         "alternative_filepath": null
     },
     {
         "id": 8,
         "name": "Ammonia",
-        "description": "Enter description for Ammonia here.",
+        "description": "Ammonia is used primarily for agriculture and fertilizer. Helps stunt colony growth by improving farm growth rate. Found on most worlds with an atmosphere, or gas giants.",
         "filename": "ammonia.png",
         "alternative_filepath": null
     },
     {
         "id": 9,
         "name": "Infectious Metals",
-        "description": "Enter description for Infectious Metals here.",
+        "description": "Unusual type of metal found only on Ethereal worlds deep on the outer rim of the galaxy. They may be used in ways to further develop infrastructure, ship hulls, and weapons.",
         "filename": "infectious_metals.png",
         "alternative_filepath": null
     },
     {
         "id": 10,
         "name": "Brine Gas",
-        "description": "Enter description for Brine Gas here.",
+        "description": "A gas only found on Ethereal worlds, with unusual properties. May be able to aid weapon development, specifically rockets and energy-based weapons.",
         "filename": "brine_gas.png",
         "alternative_filepath": null
     },
     {
         "id": 11,
         "name": "Echton Ore",
-        "description": "Enter description for Echton Ore here.",
+        "description": "An unusual ore only found on Ethereal Worlds. The properties of this ore seem to hint at incredible infrastructure applications. It may be able to propell a faction into the next age.",
         "filename": "echton_ore.png",
         "alternative_filepath": null
     },
     {
         "id": 12,
         "name": "Aquatic Resin",
-        "description": "Enter description for Aquatic Resin here.",
+        "description": "A rare resource only found in ocean and island worlds. Is able to help buff out infrastructure. Has mild to no implications in warfare.",
         "filename": "aquatic_resin.png",
         "alternative_filepath": null
     }

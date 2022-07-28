@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites and Images/Astral/Stars/black_hole.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Prefabs/Table.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Prefabs/ResourceInfo.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Fonts/Biko_Regular.otf"
@@ -146,3 +147,8 @@ margin_left = 5.0
 margin_top = 257.0
 margin_right = 284.76
 margin_bottom = 454.0
+
+[node name="ResourceInfo" parent="Panel/Planet" instance=ExtResource( 3 )]
+visible = false
+margin_left = -398.0
+margin_right = -2.0
