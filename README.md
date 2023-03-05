@@ -1,5 +1,13 @@
 # Project Vultura
 
+# Archive Note
+This game has gone through multiple phases (all on github!). It started as a 2d game (here), and has evolved into a 3d beast that is still in development. 
+
+The unreal engine version is here: https://github.com/Reyder95/Project-Vultura-3D
+The unity version is here: https://github.com/Reyder95/Project-Vultura-3D-Unity
+
+The unity version is the current real development project, and is still going strong. Follow the development there!
+
 Project Vultura is a video game set in space, bringing great aspects of many games together to create a unique experience.
 
 ## Some Inspirations
